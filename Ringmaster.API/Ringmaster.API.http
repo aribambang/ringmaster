@@ -1,0 +1,20 @@
+@host = https://localhost
+@port = 7113
+
+@Ringmaster.API_HostAddress = {{host}}:{{port}}
+
+GET {{Ringmaster.API_HostAddress}}/weatherforecast/currentDay
+Accept: application/json
+ProjectUrl: {{$projectUrl}}
+Guid: {{$guid}}
+LocalDate: {{$datetime iso8601}}
+Random-int: {{$randomInt}}
+
+###
+
+POST  {{Ringmaster.API_HostAddress}}/weatherforecast
+Content-Type: application/json
+
+Bambang
+
+###
