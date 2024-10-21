@@ -2,6 +2,14 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Ringmaster.Application\Ringmaster.Application.csproj" />
+    <ProjectReference Include="..\Ringmaster.Infrastructure\Ringmaster.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.10">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
   </ItemGroup>
 
   <PropertyGroup>
