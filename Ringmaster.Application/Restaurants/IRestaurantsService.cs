@@ -1,9 +1,9 @@
-using Ringmaster.Domain.Entities;
+using Ringmaster.Application.Dtos;
 
 namespace Ringmaster.Application;
 
 public interface IRestaurantsService
 {
-    Task<IEnumerable<Restaurant>> GetAllRestaurants();
-    Task<Restaurant?> GetById(int id);
+    Task<IEnumerable<RestaurantDto>> GetAllRestaurants();
+    Task<RestaurantDto?> GetById(int id);
 }
