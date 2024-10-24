@@ -7,3 +7,8 @@ GET {{Ringmaster.API_HostAddress}}/api/restaurants
 Accept: application/json
 Content-Type: application/json
 ###
+
+GET {{Ringmaster.API_HostAddress}}/api/restaurants/3
+Accept: application/json
+Content-Type: application/json
+###
