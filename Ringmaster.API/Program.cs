@@ -1,6 +1,6 @@
-using Ringmaster.API.Controllers;
 using Ringmaster.Infrastructure.Extensions;
 using Ringmaster.Infrastructure.Seeders;
+using Ringmaster.Application.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,8 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
-builder.Services.AddScoped<IWeatherForecastService, WeatherForecastService>();
-
+builder.Services.AddApplication();
 builder.Services.AddInfrastructure(builder.Configuration);
 
 var app = builder.Build();

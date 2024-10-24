@@ -1,7 +1,9 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Ringmaster.Domain.Repositories;
 using Ringmaster.Infrastructure.Persistance;
+using Ringmaster.Infrastructure.Repositories;
 using Ringmaster.Infrastructure.Seeders;
 
 namespace Ringmaster.Infrastructure.Extensions;
@@ -14,5 +16,6 @@ public static class ServiceCollectionExtensions
         services.AddDbContext<RestaurantsDBContext>(options => options.UseNpgsql(connectionString));
 
         services.AddScoped<IRestaurantSeeder, RestaurantSeeder>();
+        services.AddScoped<IRestaurantsRepository, RestaurantsRepository>();
     }
 }
