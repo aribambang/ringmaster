@@ -12,3 +12,20 @@ GET {{Ringmaster.API_HostAddress}}/api/restaurants/1
 Accept: application/json
 Content-Type: application/json
 ###
+
+POST {{Ringmaster.API_HostAddress}}/api/restaurants
+Accept: application/json
+Content-Type: application/json
+
+{
+  "Name": "Spicy",
+  "Description": "A culinary",
+  "Category": "Fine dining",
+  "HasDelivery": true,
+  "ContactEmail": "spicy@spicy.com",
+  "ContactNumber": "+6285123123123",
+  "City": "Jakarta",
+  "Street": "Jl. Mawar",
+  "PostalCode": "54321"
+}
+###

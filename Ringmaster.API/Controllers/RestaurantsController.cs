@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Ringmaster.Application;
+using Ringmaster.Application.Restaurants.Dtos;
 
 namespace Ringmaster.API.Controllers;
 
@@ -22,6 +23,13 @@ public class RestaurantsController(IRestaurantsService restaurantsService) : Con
         if (restaurant is null) return NotFound();
 
         return Ok(restaurant);
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> CreateRestaurant([FromBody] CreateRestaurantDto createRestaurantDto)
+    {
+        int id = await restaurantsService.Create(createRestaurantDto);
+        return CreatedAtAction(nameof(GetById), new { id }, null);
     }
 }
 
