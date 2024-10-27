@@ -18,9 +18,9 @@ Accept: application/json
 Content-Type: application/json
 
 {
-  "Name": "Spicy",
+  "Name": "Ok nice",
   "Description": "A culinary",
-  "Category": "Fine dining",
+  "Category": "Indonesian",
   "HasDelivery": true,
   "ContactEmail": "spicy@spicy.com",
   "ContactNumber": "+6285123123123",
